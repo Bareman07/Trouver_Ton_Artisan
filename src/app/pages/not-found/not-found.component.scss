@@ -1,0 +1,19 @@
+.not-found {
+  text-align: center;
+  margin-top: 100px;
+
+  h1 {
+    font-size: 6rem;
+    color: crimson;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  a {
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: underline;
+  }
+}
