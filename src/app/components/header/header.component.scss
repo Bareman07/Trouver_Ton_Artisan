@@ -1,0 +1,195 @@
+// Le header global
+.site-header {
+  background-color: #f1f8fc; // Couleur de fond du header (bleu très clair)
+  width: 100%; // Le header prend toute la largeur de l'écran
+  padding: 0 0; // Un peu d'espace en haut et en bas
+
+  // Conteneur principal pour centrer le contenu et gérer la largeur
+  .container {
+    margin: 0; // Centrage horizontal
+    padding: 0; // Un peu d'air sur les côtés
+    display: flex;
+    flex-direction: column; // Les éléments (top + nav) sont empilés
+    gap: 1rem; // Espace entre le top et la barre de navigation
+    width: 100%;
+  }
+
+  // Partie supérieure du header : logo à gauche, recherche + bouton à droite
+  .header-top {
+    display: flex;
+    align-items: center; // Alignement vertical au centre
+    justify-content: space-between; // Logo à gauche, recherche + bouton à droite
+    gap: 1rem; // Espace entre les éléments
+    flex-wrap: wrap; // Permet de passer à la ligne sur petits écrans si nécessaire
+
+    // Logo
+    .logo img {
+      height: 100px; // Hauteur du logo
+      width: auto; // Largeur automatique pour garder les proportions
+      margin: 0; // Pas de marge
+      order: 1;
+    }
+
+  // Bouton burger pour le menu responsive
+      .burger-button {
+      display: none; // Cacher par défaut, affiché en responsive
+      background-color: transparent; // Fond transparent
+      border: none; // Pas de bordure
+      cursor: pointer; // Curseur pointeur
+      order: 2; // Met le bouton burger après le logo
+    }
+
+    // Zone à droite (recherche + bouton connexion)
+    .right-section {
+      display: flex;
+      align-items: center;
+      gap: 1rem; // Espace entre barre de recherche et bouton
+      padding-right: 1rem;
+      order : 3; // Met la section à droite après le logo et le burger
+
+      // Barre de recherche
+      .search-bar {
+        display: flex;
+        align-items: center;
+
+        input {
+          padding: 0.4rem 0.6rem;
+          border: 1px solid #ccc; // Bord gris clair
+          border-radius: 4px;
+          font-size: 1rem;
+        }
+
+        button {
+          padding: 0.4rem 0.6rem;
+          background-color: #0074c7; // Bleu moyen
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      }
+
+      // Bouton de connexion
+      .connexion-button {
+        padding: 0.4rem 0.6rem;
+        background-color: #00497c; // Bleu foncé
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+ // Barre de navigation (sous le header top)
+.main-nav {
+  padding-top: 0; // supprime le padding en haut
+  height: 1.5rem; // Hauteur fixe de la barre de navigation (ajuste si nécessaire)
+  width: 100%; // Prend toute la largeur de l'écran
+
+  ul {
+    display: flex;
+    justify-content: space-evenly; // Répartit les éléments de manière égale avec des espaces
+    align-items: stretch; // Permet aux enfants de prendre toute la hauteur
+    list-style: none; // Supprime les puces
+    padding: 0;
+    margin: 0;
+    height: 100%; // Pour hériter de la hauteur de .main-nav
+
+    li {
+      flex: 1; // Chaque lien prend une largeur égale
+      height: 100%;
+
+      &.connexion-burger{
+        display: none; // Cacher le burger par défaut
+      }
+
+      a {
+        display: flex; // Permet de centrer le texte à l'intérieur
+        align-items: center; // Centre verticalement
+        justify-content: center; // Centre horizontalement
+        height: 100%;
+        width: 100%;
+        text-decoration: none; // Supprime le soulignement
+        color: #00497c; // Couleur du texte
+        background-color: white; // Fond blanc par défaut
+        box-sizing: border-box; // Inclut les bordures dans la taille
+
+        // Bordures visibles autour de chaque lien
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+
+        &.active {
+          font-weight: bold; // Met en gras si le lien est actif
+          color: #0074c7; // Couleur plus vive
+        }
+
+        &:hover {
+          background-color: #e0f0ff; // Fond plus clair au survol
+        }
+      }
+
+      // Supprime la bordure gauche sur le premier lien (évite double bordure)
+      &:first-child a {
+        border-left: none;
+      }
+    }
+  }
+  
+}
+
+// Responsive - Burger menu header
+@media screen and (max-width: 560px) {
+  // .header-top {
+  //   flex-direction: row; // Empile les éléments
+  // }
+
+  .site-header .header-top .logo-burger {
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+
+  .main-nav ul {
+    display: none; // Cacher le menu classique
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    position: relative;
+  z-index: 1000; // 🔧 assure que le menu passe au-dessus du contenu
+  }
+
+  .main-nav.open ul {
+    display: flex; // Afficher le menu quand ouvert
+  }
+
+  .site-header .header-top .burger-button {
+    display: block; // Afficher le bouton burger
+    width: auto;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin-left: auto; // Aligne le bouton burger à droite
+    order: 2; // Met le bouton burger après le logo
+  }
+
+  .right-section {
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .search-bar,
+    .connexion-button {
+    display: none;
+  }
+
+  .main-nav ul li.connexion-burger {
+    display: flex;
+  }
+}

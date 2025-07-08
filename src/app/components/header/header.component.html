@@ -1,14 +1,37 @@
 <header class="site-header">
   <div class="container">
-    <a routerLink="/" class="logo">
-      <img src="assets/images/logo-site.png" alt="Logo site">
-    </a>
-    <p>header works!</p>
-    <nav class="main-nav">
+    <div class="header-top">
+      <div class="logo-burger">
+        <!-- Logo à gauche -->
+        <a routerLink="/" class="logo">
+          <img src="assets/img/Logo.png" alt="Logo local" />
+        </a>
+        <!-- Bouton burger  -->
+        <button class="burger-button" (click)="toggleMenu()">☰</button>
+        <!-- Recherche + Connexion à droite -->
+      </div>
+      <div class="right-section">
+        <form class="search-bar" (submit)="onSearch()">
+          <input
+            type="text"
+            name="q"
+            placeholder="Rechercher un artisan..."
+            [(ngModel)]="searchQuery"
+          />
+          <button type="submit">🔍</button>
+        </form>
+        <button class="connexion-button">Connexion</button>
+      </div>
+    </div>
+
+    <!-- Barre de navigation en dessous -->
+    <nav class="main-nav" [class.open]="menuOpen"> <!-- Ajoute la classe 'open' dynamiquement selon menuOpen -->
       <ul>
-        <li><a routerLink="/a-propos" routerLinkActive="active">À propos</a></li>
-        <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
-        <li><a routerLink="/accueil" routerLinkActive="active">Accueil</a></li>
+        <li class="connexion-burger"><a routerLink="/connexion" routerLinkActive="active">Connexion</a></li>
+        <li><a routerLink="/batiment" routerLinkActive="active">Bâtiment</a></li>
+        <li><a routerLink="/services" routerLinkActive="active">Services</a></li>
+        <li><a routerLink="/fabrication" routerLinkActive="active">Fabrication</a></li>
+        <li><a routerLink="/alimentation" routerLinkActive="active">Alimentation</a></li>
       </ul>
     </nav>
   </div>

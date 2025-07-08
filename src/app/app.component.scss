@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  min-height: 100vh; // La page prend au minimum toute la hauteur de l'écran
+}
+
+main {
+  flex: 1; // Prend toute la place dispo entre le header et le footer
+}
+
+html, body {
+  overflow-x: hidden; // 👈 Empêche les débordements horizontaux
+  width: 100%;        // S'assure que rien ne déborde en largeur
+}
