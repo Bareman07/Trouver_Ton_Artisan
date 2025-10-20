@@ -1,2 +1,37 @@
-<p>accueil works!</p>
-<img src="assets/img/BDSephiros.jpg" alt="Logo local" />
+<!-- Groupe 1 -->
+<section class="artisan-group">
+  <div class="artisan-card" *ngFor="let artisan of artisansGroupe1">
+    <div class="artisan-content">
+      <img [src]="artisan.image" [alt]="artisan.nom" class="artisan-img" />
+      <div class="artisan-text">
+        <h3>{{ artisan.nom }}</h3>
+        <p>Spécialité : {{ artisan.specialite }}</p>
+        <p>{{ artisan.description }}</p>
+        <div class="btn-group">
+          <button class="btn">Lien</button>
+          <button class="btn">Map</button>
+        </div>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Groupe 2 -->
+<section class="artisan-group">
+  <div class="artisan-card" *ngFor="let artisan of artisansGroupe2">
+    <div class="artisan-content">
+      <img [src]="artisan.image" [alt]="artisan.nom" class="artisan-img" />
+      <div class="artisan-text">
+        <h3>{{ artisan.nom }}</h3>
+        <p>Spécialité : {{ artisan.specialite }}</p>
+        <p>{{ artisan.description }}</p>
+        <div class="btn-group">
+          <button class="btn">Lien</button>
+          <button class="btn">Map</button>
+        </div>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>

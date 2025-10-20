@@ -1,0 +1,119 @@
+[
+  {
+    "group": "top_artisans",
+    "type": "artisan",
+    "id": 1,
+    "nom": "Jean Dupont",
+    "specialite": "Menuisier",
+    "description": "Expert en menuiserie bois traditionnelle.",
+    "note": 4.8,
+    "categorie": "batiment",
+    "images": {
+      "photo": "assets/artisans/jean-dupont/photo.jpg",
+      "logo": "assets/artisans/jean-dupont/logo.jpg"
+    }
+  },
+  {
+    "group": "top_artisans",
+    "type": "artisan",
+    "id": 2,
+    "nom": "Marie Lemoine",
+    "specialite": "Céramiste",
+    "description": "Créations uniques en terre cuite et porcelaine.",
+    "note": 5,
+    "categorie": "fabrication",
+    "images": {
+      "photo": "assets/artisans/marie-lemoine/photo.jpg",
+      "logo": "assets/artisans/marie-lemoine/logo.jpg"
+    }
+  },
+  {
+    "group": "top_artisans",
+    "type": "artisan",
+    "id": 3,
+    "nom": "Paul Bernard",
+    "specialite": "Boulanger",
+    "description": "Pain bio et viennoiseries faites maison.",
+    "note": 4.7,
+    "categorie": "alimentation",
+    "images": {
+      "photo": "assets/artisans/paul-bernard/photo.jpg",
+      "logo": "assets/artisans/paul-bernard/logo.jpg"
+    }
+  },
+  {
+    "group": "catalogue",
+    "type": "artisan",
+    "id": 4,
+    "nom": "Lucie Martin",
+    "specialite": "Plombier",
+    "description": "Interventions rapides et soignées.",
+    "note": 4.2,
+    "categorie": "services",
+    "images": {
+      "photo": "assets/artisans/lucie-martin/photo.jpg",
+      "logo": "assets/artisans/lucie-martin/logo.jpg"
+    }
+  },
+  {
+  "group": "catalogue",
+  "type": "artisan",
+  "id": 5,
+  "nom": "Sophie Leroy",
+  "specialite": "Boucher",
+  "description": "Propose des viandes locales et des préparations faites maison issues de l’élevage régional.",
+  "note": 4.6,
+  "categorie": "alimentation",
+  "images": {
+    "photo": "assets/artisans/sophie-leroy/photo.jpg",
+    "logo": "assets/artisans/sophie-leroy/logo.jpg"
+    }
+  },
+  {
+  "group": "catalogue",
+  "type": "artisan",
+  "id": 6,
+  "nom": "Thomas Girard",
+  "specialite": "Charpentier",
+  "description": "Spécialiste des structures bois et des rénovations de toitures traditionnelles.",
+  "note": 4.4,
+  "categorie": "batiment",
+  "images": {
+    "photo": "assets/artisans/thomas-girard/photo.jpg",
+    "logo": "assets/artisans/thomas-girard/logo.jpg"
+   }
+  },
+
+  {
+    "group": "images",
+    "type": "image",
+    "id": 501,
+    "src": "assets/images/ateliers/atelier-bois.jpg",
+    "alt": "Atelier de menuiserie",
+    "categorie": "batiment"
+  },
+  {
+    "group": "images",
+    "type": "image",
+    "id": 502,
+    "src": "assets/images/ateliers/atelier-ceramique.jpg",
+    "alt": "Atelier de céramique",
+    "categorie": "fabrication"
+  },
+  {
+    "group": "images",
+    "type": "image",
+    "id": 503,
+    "src": "assets/images/ateliers/atelier-boulangerie.jpg",
+    "alt": "Four de boulangerie artisanale",
+    "categorie": "alimentation"
+  },
+  {
+    "group": "images",
+    "type": "image",
+    "id": 504,
+    "src": "assets/images/ateliers/atelier-plomberie.jpg",
+    "alt": "Travail de plomberie",
+    "categorie": "services"
+  }
+]
