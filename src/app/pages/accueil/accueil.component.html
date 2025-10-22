@@ -2,16 +2,23 @@
 <section class="artisan-group">
   <div class="artisan-card" *ngFor="let artisan of artisansGroupe1">
     <div class="artisan-content">
-      <img [src]="artisan.image" [alt]="artisan.nom" class="artisan-img" />
+
+      <!-- ✅ On récupère la photo depuis artisan.images.photo -->
+      <img [src]="artisan.images.photo" [alt]="artisan.nom" class="artisan-img" />
+
       <div class="artisan-text">
         <h3>{{ artisan.nom }}</h3>
         <p>Spécialité : {{ artisan.specialite }}</p>
+        <p>Ville : {{ artisan.ville }}</p>
         <p>{{ artisan.description }}</p>
+
         <div class="btn-group">
           <button class="btn">Lien</button>
           <button class="btn">Map</button>
         </div>
-        <div class="stars">★★★★★</div>
+
+        <!-- ✅ Affiche la note dynamique -->
+        <div class="stars">⭐ {{ artisan.note }}</div>
       </div>
     </div>
   </div>
@@ -21,16 +28,19 @@
 <section class="artisan-group">
   <div class="artisan-card" *ngFor="let artisan of artisansGroupe2">
     <div class="artisan-content">
-      <img [src]="artisan.image" [alt]="artisan.nom" class="artisan-img" />
+      <img [src]="artisan.images.photo" [alt]="artisan.nom" class="artisan-img" />
       <div class="artisan-text">
         <h3>{{ artisan.nom }}</h3>
         <p>Spécialité : {{ artisan.specialite }}</p>
+        <p>Ville : {{ artisan.ville }}</p>
         <p>{{ artisan.description }}</p>
+
         <div class="btn-group">
           <button class="btn">Lien</button>
           <button class="btn">Map</button>
         </div>
-        <div class="stars">★★★★★</div>
+
+        <div class="stars">⭐ {{ artisan.note }}</div>
       </div>
     </div>
   </div>
