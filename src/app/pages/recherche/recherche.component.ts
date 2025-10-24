@@ -3,11 +3,12 @@ import { Component, OnInit } from '@angular/core'; // Pour créer le composant e
 import { ActivatedRoute } from '@angular/router'; // Pour récupérer les paramètres de l’URL
 import { DataService } from '../../services/data.service'; // Service pour charger les données JSON
 import { CommonModule } from '@angular/common'; // Nécessaire pour *ngFor, *ngIf
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-recherche', // Nom du composant utilisé dans les templates
   standalone: true, // Composant autonome (pas besoin d’être déclaré dans un module)
-  imports: [CommonModule], //  FormsModule ou CommonModule ici si besoin
+  imports: [CommonModule, RouterModule], //  FormsModule ou CommonModule ici si besoin
   templateUrl: './recherche.component.html', // Fichier HTML associé
   styleUrls: ['./recherche.component.scss'] // Fichier SCSS associé
 })

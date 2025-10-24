@@ -1,0 +1,29 @@
+
+<div *ngIf="artisan" class="artisan-detail container py-4">
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <img [src]="artisan.images.photo" alt="{{ artisan.nom }}" class="img-fluid rounded-circle mb-3" />
+      <img [src]="artisan.images.logo" alt="Logo" class="img-fluid artisan-logo" />
+    </div>
+    <div class="col-md-8">
+      <h2>{{ artisan.nom }}</h2>
+      <p><strong>Spécialité :</strong> {{ artisan.specialite }}</p>
+      <p><strong>Ville :</strong> {{ artisan.ville }}</p>
+      <p><strong>Description :</strong> {{ artisan.description }}</p>
+
+      <!-- ⭐ Note avec étoiles -->
+      <div class="note mb-3">
+        <ng-container *ngFor="let star of [1,2,3,4,5]">
+          <i class="bi" [ngClass]="{
+            'bi-star-fill': artisan.note >= star,
+            'bi-star-half': artisan.note >= star - 0.5 && artisan.note < star,
+            'bi-star': artisan.note < star - 0.5
+          }"></i>
+        </ng-container>
+        <span class="ms-2">({{ artisan.note }}/5)</span>
+      </div>
+
+      <button class="btn btn-primary">Contacter</button>
+    </div>
+  </div>
+</div>

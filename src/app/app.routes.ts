@@ -12,6 +12,7 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'a-propos', component: AProposComponent },
   { path: 'recherche', component: RechercheComponent },
+  { path: 'artisan/:id', loadComponent: () => import('./pages/artisan/artisan.component').then(m => m.ArtisanComponent) },
   // Route 404 (toujours en dernier)
   { path: '**', component: NotFoundComponent }
 ];
