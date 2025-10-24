@@ -3,6 +3,7 @@ import { AccueilComponent } from './pages/accueil/accueil.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AProposComponent } from './pages/a-propos/a-propos.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { RechercheComponent } from './pages/recherche/recherche.component';
 // Import the components pour les routes
 
 export const routes: Routes = [
@@ -10,6 +11,7 @@ export const routes: Routes = [
   { path: 'accueil', component: AccueilComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'a-propos', component: AProposComponent },
+  { path: 'recherche', component: RechercheComponent },
   // Route 404 (toujours en dernier)
   { path: '**', component: NotFoundComponent }
 ];

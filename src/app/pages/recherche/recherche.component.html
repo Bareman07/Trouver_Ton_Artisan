@@ -1,0 +1,29 @@
+<h2 *ngIf="searchTerm" class="search-title">
+  Résultats pour : "{{ searchTerm }}"
+</h2>
+
+<div class="artisan-list">
+  <div class="artisan-card row align-items-center" *ngFor="let artisan of artisans">
+    <!-- Image à gauche -->
+    <div class="col-md-3 col-12 text-center">
+      <img [src]="artisan.images.photo" alt="{{ artisan.nom }}" class="img-fluid rounded artisan-img" />
+    </div>
+
+    <!-- Infos à droite -->
+    <div class="col-md-9 col-12">
+      <h3 class="text-primary">{{ artisan.nom }}</h3>
+      <p><strong>Spécialité :</strong> {{ artisan.specialite }}</p>
+      <p><strong>Ville :</strong> {{ artisan.ville }}</p>
+      <p><strong>Note :</strong> {{ artisan.note }}</p>
+
+      <!--Lien vers la page de l’artisan -->
+      <!-- <a [routerLink]="['/artisan', artisan.id]" class="btn btn-outline-primary mt-2">
+        Voir le profil
+      </a> -->
+    </div>
+  </div>
+</div>
+
+<p *ngIf="artisans.length === 0" class="no-result">
+  Aucun artisan ne correspond à votre recherche.
+</p>
