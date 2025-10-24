@@ -10,8 +10,8 @@
     "categorie": "batiment",
     "ville": "Clermont-Ferrand",
     "images": {
-      "photo": "assets/artisans/jean-dupont/photo.jpg",
-      "logo": "assets/artisans/jean-dupont/logo.jpg"
+      "photo": "assets/img/artisans/jean-dupont/photo.png",
+      "logo": "assets/img/artisans/jean-dupont/logo.png"
     }
   },
   {
@@ -25,8 +25,8 @@
     "categorie": "fabrication",
     "ville": "Reims",
     "images": {
-      "photo": "assets/artisans/marie-lemoine/photo.jpg",
-      "logo": "assets/artisans/marie-lemoine/logo.jpg"
+      "photo": "assets/img/artisans/marie-lemoine/photo.png",
+      "logo": "assets/img/artisans/marie-lemoine/logo.png"
     }
   },
   {
@@ -40,8 +40,8 @@
     "categorie": "alimentation",
     "ville": "Saint-Étienne",
     "images": {
-      "photo": "assets/artisans/paul-bernard/photo.jpg",
-      "logo": "assets/artisans/paul-bernard/logo.jpg"
+      "photo": "assets/img/artisans/paul-bernard/photo.png",
+      "logo": "assets/img/artisans/paul-bernard/logo.png"
     }
   },
   {
@@ -55,8 +55,8 @@
     "categorie": "services",
     "ville": "Lille",
     "images": {
-      "photo": "assets/artisans/lucie-martin/photo.jpg",
-      "logo": "assets/artisans/lucie-martin/logo.jpg"
+      "photo": "assets/img/artisans/lucie-martin/photo.png",
+      "logo": "assets/img/artisans/lucie-martin/logo.png"
     }
   },
   {
@@ -70,8 +70,8 @@
   "categorie": "alimentation",
   "ville": "Lyon",
   "images": {
-    "photo": "assets/artisans/sophie-leroy/photo.jpg",
-    "logo": "assets/artisans/sophie-leroy/logo.jpg"
+    "photo": "assets/img/artisans/sophie-leroy/photo.png",
+    "logo": "assets/img/artisans/sophie-leroy/logo.png"
     }
   },
   {
@@ -85,8 +85,8 @@
   "categorie": "batiment",
   "ville": "Hazebrouck",
   "images": {
-    "photo": "assets/artisans/thomas-girard/photo.jpg",
-    "logo": "assets/artisans/thomas-girard/logo.jpg"
+    "photo": "assets/img/artisans/thomas-girard/photo.png",
+    "logo": "assets/img/artisans/thomas-girard/logo.png"
    }
   },
 
@@ -94,7 +94,7 @@
     "group": "images",
     "type": "image",
     "id": 501,
-    "src": "assets/images/ateliers/atelier-bois.jpg",
+    "src": "assets/img/images/ateliers/atelier-bois.png",
     "alt": "Atelier de menuiserie",
     "categorie": "batiment"
   },
@@ -102,7 +102,7 @@
     "group": "images",
     "type": "image",
     "id": 502,
-    "src": "assets/images/ateliers/atelier-ceramique.jpg",
+    "src": "assets/img/images/ateliers/atelier-ceramique.png",
     "alt": "Atelier de céramique",
     "categorie": "fabrication"
   },
@@ -110,7 +110,7 @@
     "group": "images",
     "type": "image",
     "id": 503,
-    "src": "assets/images/ateliers/atelier-boulangerie.jpg",
+    "src": "assets/img/images/ateliers/atelier-boulangerie.png",
     "alt": "Four de boulangerie artisanale",
     "categorie": "alimentation"
   },
@@ -118,7 +118,7 @@
     "group": "images",
     "type": "image",
     "id": 504,
-    "src": "assets/images/ateliers/atelier-plomberie.jpg",
+    "src": "assets/img/images/ateliers/atelier-plomberie.png",
     "alt": "Travail de plomberie",
     "categorie": "services"
   }

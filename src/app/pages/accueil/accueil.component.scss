@@ -5,70 +5,68 @@ $color_gris: #384050;
 $color_rouge: #cd2c2e;
 $color_vert: #82b864;
 
-.artisan-card {
-  margin: 2rem 1rem;
-  padding: 1rem;
-  border-radius: 12px;
-  background-color: $color_blanc;
+.hero-banner {
+  max-height: 400px;
+  object-fit: cover;
 
-  .artisan-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  .artisan-img {
-    flex: 1 1 250px;
-    max-width: 300px;
-    border-radius: 12px;
-    object-fit: cover;
+  img {
     width: 100%;
     height: auto;
+    display: block;
+  }
+}
+
+.top-artisans {
+  background-color: $color_blanc;
+  border: 2px solid $color_bleuCLair;
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  margin: 0rem auto 4rem auto;
+
+  @media (max-width: 559px) {
+    margin-top: 8rem; // ou 0 si tu veux la supprimer complètement
   }
 
-  .artisan-text {
-    flex: 2 1 400px;
+  .top-title {
+    color: $color_bleuFonce;
+  }
 
-    h3 {
-      margin-top: 0;
-      font-size: 1.5rem;
+  .image-block {
+    background-image: url('/assets/images/ambiance.jpg'); // à personnaliser
+    background-size: cover;
+    background-position: center;
+    min-height: 250px;
+  }
+
+  .artisan-card {
+    border: 2px solid $color_bleuCLair;
+    border-radius: 12px;
+    background-color: $color_blanc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     }
 
-    .btn-group {
-      margin-top: 1rem;
+    .btn {
+      background-color: $color_bleuCLair;
+      color: $color_blanc;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      margin-right: 0.5rem;
+      cursor: pointer;
+      transition: 0.3s;
 
-      .btn {
-        background-color: $color_bleuCLair;
-        color: $color_blanc;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 6px;
-        margin-right: 0.5rem;
-        cursor: pointer;
-        transition: 0.3s;
-
-        &:hover {
-          background-color: $color_bleuFonce;
-        }
+      &:hover {
+        background-color: $color_bleuFonce;
       }
     }
 
     .stars {
-      margin-top: 0.5rem;
       font-size: 1.2rem;
       color: $color_vert;
     }
   }
-
-//   @media (max-width: 768px) {
-//     .artisan-content {
-//       flex-direction: column;
-//       text-align: center;
-//     }
-
-//     .btn-group {
-//       justify-content: center;
-//     }
-//   }
 }

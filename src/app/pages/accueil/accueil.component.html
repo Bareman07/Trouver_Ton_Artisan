@@ -1,46 +1,106 @@
-<!-- Groupe 1 -->
-<section class="artisan-group">
-  <div class="artisan-card" *ngFor="let artisan of artisansGroupe1">
-    <div class="artisan-content">
+<!-- Image responsive en haut -->
+<picture class="hero-banner w-100 d-block mb-4">
+  <!-- Image pour les écrans ≥ 768px -->
+  <source media="(min-width: 768px)" srcset="assets/img/cheminementHorizontale.png" />
 
-      <!-- ✅ On récupère la photo depuis artisan.images.photo -->
-      <img [src]="artisan.images.photo" [alt]="artisan.nom" class="artisan-img" />
+  <!-- Image pour les écrans entre 560px et 767px -->
+  <source media="(min-width: 560px) and (max-width: 767px)" srcset="assets/img/cheminementMilieu.png" />
 
-      <div class="artisan-text">
-        <h3>{{ artisan.nom }}</h3>
-        <p>Spécialité : {{ artisan.specialite }}</p>
-        <p>Ville : {{ artisan.ville }}</p>
-        <p>{{ artisan.description }}</p>
+  <!-- Image pour les écrans < 560px -->
+  <img src="assets/img/cheminementVerticale.png" alt="Cheminement artisan" class="img-fluid w-100" />
+</picture>
 
-        <div class="btn-group">
-          <button class="btn">Lien</button>
-          <button class="btn">Map</button>
+<!-- Section Top 3 -->
+<section class="container top-artisans">
+  <h2 class="text-center fw-bold top-title mb-4">Top 3 des artisans</h2>
+
+  <!-- Ligne 1 : Image / Top1 / Image -->
+  <div class="row mb-4">
+    <div class="col-md-4">
+       <img src="assets/img/accueilTop_1.jpg" alt="imgAccueilTop3" class="img-fluid rounded w-100" />
+    </div>
+    <div class="col-md-4">
+      <div class="card artisan-card p-3">
+        <div class="row g-0 align-items-center">
+          <!-- Image à gauche -->
+          <div class="col-md-4">
+            <img [src]="topArtisans[0]?.images.photo" [alt]="topArtisans[0]?.nom" class="img-fluid rounded-start w-100" />
+          </div>
+          <!-- Texte à droite -->
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="fw-semibold">{{ topArtisans[0]?.nom }}</h3>
+              <p>Spécialité : {{ topArtisans[0]?.specialite }}</p>
+              <p>Ville : {{ topArtisans[0]?.ville }}</p>
+              <p>{{ topArtisans[0]?.description }}</p>
+              <div class="btn-group mt-2">
+                <a [routerLink]="['/artisan', topArtisans[0]?.id]" class="btn">Lien</a>
+                <button class="btn">Map</button>
+              </div>
+              <div class="stars mt-2">⭐ {{ topArtisans[0]?.note }}</div>
+            </div>
+          </div>
         </div>
-
-        <!-- ✅ Affiche la note dynamique -->
-        <div class="stars">⭐ {{ artisan.note }}</div>
       </div>
     </div>
+    <div class="col-md-4">
+       <img src="assets/img/accueilTop_2.jpg" alt="imgAccueilTop3" class="img-fluid rounded w-100" />
+    </div>
   </div>
-</section>
 
-<!-- Groupe 2 -->
-<section class="artisan-group">
-  <div class="artisan-card" *ngFor="let artisan of artisansGroupe2">
-    <div class="artisan-content">
-      <img [src]="artisan.images.photo" [alt]="artisan.nom" class="artisan-img" />
-      <div class="artisan-text">
-        <h3>{{ artisan.nom }}</h3>
-        <p>Spécialité : {{ artisan.specialite }}</p>
-        <p>Ville : {{ artisan.ville }}</p>
-        <p>{{ artisan.description }}</p>
-
-        <div class="btn-group">
-          <button class="btn">Lien</button>
-          <button class="btn">Map</button>
+  <!-- Ligne 2 : Top2 / Image / Top3 -->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card artisan-card p-3">
+        <div class="row g-0 align-items-center">
+          <!-- Image à gauche -->
+          <div class="col-md-4">
+            <img [src]="topArtisans[1]?.images.photo" [alt]="topArtisans[1]?.nom" class="img-fluid rounded-start w-100" />
+          </div>
+          <!-- Texte à droite -->
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="fw-semibold">{{ topArtisans[1]?.nom }}</h3>
+              <p>Spécialité : {{ topArtisans[1]?.specialite }}</p>
+              <p>Ville : {{ topArtisans[1]?.ville }}</p>
+              <p>{{ topArtisans[1]?.description }}</p>
+              <div class="btn-group mt-2">
+                <a [routerLink]="['/artisan', topArtisans[1]?.id]" class="btn">Lien</a>
+                <button class="btn">Map</button>
+              </div>
+              <div class="stars mt-2">⭐ {{ topArtisans[1]?.note }}</div>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <div class="stars">⭐ {{ artisan.note }}</div>
+    <div class="col-md-4">
+       <img src="assets/img/accueilTop_3.jpg" alt="imgAccueilTop3" class="img-fluid rounded w-100" />
+    </div>
+
+    <div class="col-md-4">
+      <div class="card artisan-card p-3">
+        <div class="row g-0 align-items-center">
+          <!-- Image à gauche -->
+          <div class="col-md-4">
+            <img [src]="topArtisans[2]?.images.photo" [alt]="topArtisans[2]?.nom" class="img-fluid rounded-start w-100" />
+          </div>
+          <!-- Texte à droite -->
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="fw-semibold">{{ topArtisans[2]?.nom }}</h3>
+              <p>Spécialité : {{ topArtisans[2]?.specialite }}</p>
+              <p>Ville : {{ topArtisans[2]?.ville }}</p>
+              <p>{{ topArtisans[2]?.description }}</p>
+              <div class="btn-group mt-2">
+                <a [routerLink]="['/artisan', topArtisans[2]?.id]" class="btn">Lien</a>
+                <button class="btn">Map</button>
+              </div>
+              <div class="stars mt-2">⭐ {{ topArtisans[2]?.note }}</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
