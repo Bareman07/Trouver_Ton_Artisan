@@ -17,9 +17,17 @@ export class ArtisanComponent implements OnInit {
   constructor(private route: ActivatedRoute, private dataService: DataService) {}
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.dataService.getData().subscribe(data => {
-      this.artisan = data.find((item: any) => item.type === 'artisan' && item.id === id);
+  // Récupère l'ID passé dans l'URL (ex: /artisan/2 → "2")
+  // On le convertit en nombre car dans le JSON les id sont numériques
+  const id = Number(this.route.snapshot.paramMap.get('id'));
+
+  // Appel du service qui fournit les données (JSON des artisans + images)
+  this.dataService.getData().subscribe(data => {
+    
+    // Recherche dans le tableau l'artisan qui correspond à l'ID
+    // On filtre aussi pour être sûr que ce soit bien un "artisan"
+    this.artisan = data.find((item: any) =>
+      item.type === 'artisan' && item.id === id);
     });
   }
 }
