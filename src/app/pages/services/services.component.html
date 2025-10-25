@@ -1,0 +1,26 @@
+<!-- Liste verticale des artisans du secteur Services -->
+<div class="container py-4">
+  <div class="row gy-4 flex-column">
+    <ng-container *ngIf="artisansServices.length > 0">
+      <div class="col-12" *ngFor="let artisan of artisansServices">
+        <a [routerLink]="['/artisan', artisan.id]" class="text-decoration-none">
+          <div class="fiche-artisan d-flex flex-wrap align-items-center">
+            <div class="image-zone" *ngIf="artisan.images?.photo">
+              <img [src]="artisan.images.photo" [alt]="artisan.nom" />
+            </div>
+            <div class="info-zone">
+              <h5 class="nom">{{ artisan.nom }}</h5>
+              <p class="note">⭐ {{ artisan.note }} / 5</p>
+              <p><strong>Spécialité :</strong> {{ artisan.specialite }}</p>
+              <p><strong>Ville :</strong> {{ artisan.ville }}</p>
+              <p class="description">{{ artisan.description }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="artisansServices.length === 0">
+      <p class="text-center w-100">Aucun artisan trouvé dans cette catégorie.</p>
+    </ng-container>
+  </div>
+</div>
