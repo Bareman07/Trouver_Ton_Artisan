@@ -64,7 +64,7 @@ $color_vert: #82b864;
 
     .description {
       font-style: italic;
-      color: darken($color_gris, 10%);
+      color: $color_gris;
     }
   }
 }
