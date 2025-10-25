@@ -1,0 +1,24 @@
+$color_blanc: #f1f8fc;
+$color_bleuCLair: #0074c7;
+$color_bleuFonce: #00497c;
+$color_gris: #384050;
+$color_rouge: #cd2c2e;
+$color_vert: #82b864;
+
+.contact-page {
+  max-width: 600px;
+  margin: auto;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .form-label {
+    font-weight: bold;
+  }
+
+  .btn-success {
+    background-color: $color_vert;
+    border: none;
+  }
+}

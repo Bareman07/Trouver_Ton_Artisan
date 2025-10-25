@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { DataService } from '../../services/data.service';
+import { RouterModule } from '@angular/router'; // Pour utiliser [routerLink]
 
 @Component({
   selector: 'app-artisan',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './artisan.component.html',
   styleUrls: ['./artisan.component.scss']
 })

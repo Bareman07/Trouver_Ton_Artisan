@@ -1,1 +1,56 @@
-<p>contact works!</p>
+<!-- Affiche les infos de l’artisan -->
+<div *ngIf="artisan" class="contact-page container py-4">
+  <h2>Contacter {{ artisan.nom }}</h2>
+  <p><strong>Spécialité :</strong> {{ artisan.specialite }}</p>
+  <p><strong>Ville :</strong> {{ artisan.ville }}</p>
+
+  <!-- Formulaire de contact -->
+  <form (ngSubmit)="envoyerMessage()" *ngIf="!messageSent">
+    <!-- Champ nom -->
+    <div class="mb-3">
+      <label for="nom" class="form-label">Votre nom</label>
+      <input
+        type="text"
+        id="nom"
+        [(ngModel)]="form.nom"
+        name="nom"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <!-- Champ email -->
+    <div class="mb-3">
+      <label for="email" class="form-label">Votre email</label>
+      <input
+        type="email"
+        id="email"
+        [(ngModel)]="form.email"
+        name="email"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <!-- Champ message -->
+    <div class="mb-3">
+      <label for="message" class="form-label">Votre message</label>
+      <textarea
+        id="message"
+        [(ngModel)]="form.message"
+        name="message"
+        rows="5"
+        class="form-control"
+        required
+      ></textarea>
+    </div>
+
+    <!-- Bouton d’envoi -->
+    <button type="submit" class="btn btn-success">Envoyer</button>
+  </form>
+
+  <!-- Message de confirmation après envoi -->
+  <div *ngIf="messageSent" class="alert alert-success mt-4">
+    Votre message a bien été envoyé à {{ artisan.nom }} !
+  </div>
+</div>

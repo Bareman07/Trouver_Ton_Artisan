@@ -21,9 +21,11 @@
           }"></i>
         </ng-container>
         <span class="ms-2">({{ artisan.note }}/5)</span>
-      </div>
+    </div>
 
-      <button class="btn btn-primary">Contacter</button>
+    <a [routerLink]="['/contact', artisan.id]" class="btn btn-primary mt-3">
+        Contacter cet artisan
+    </a>
     </div>
   </div>
 </div>
