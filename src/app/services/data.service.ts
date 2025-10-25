@@ -11,11 +11,12 @@ export class DataService {
   // On injecte (on fait passer) HttpClient dans le constructeur
   // pour pouvoir faire des requêtes HTTP (comme lire un fichier JSON)
   constructor(private http: HttpClient) {}
-
+  // Angular le sert automatiquement à l'URL http://localhost:4200/assets/data/data.json
+  private dataUrl = 'assets/data/data.json';
   // Méthode pour récupérer le contenu de ton fichier JSON
-  getData(): Observable<any> {
+  getData(): Observable<any[]> {
     // On fait une requête GET vers ton fichier JSON
     // assets/... signifie que le fichier est dans ton dossier "src/assets/"
-    return this.http.get('assets/data/data.json');
+    return this.http.get<any[]>(this.dataUrl);
   }
 }
