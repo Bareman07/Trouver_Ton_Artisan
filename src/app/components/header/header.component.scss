@@ -1,14 +1,22 @@
+$color_blanc: #f1f8fc; // Bleu très clair
+$color_bleuCLair: #0074c7; // Bleu moyen
+$color_bleuFonce: #00497c; // Bleu foncé
+$color_gris: #384050; // Gris foncé
+$color_rouge: #cd2c2e; // Rouge vif
+$color_vert: #82b864; // Vert doux
+
 // Le header global
 .site-header {
-  background-color: #f1f8fc; // Couleur de fond du header (bleu très clair)
+  background-color: $color_blanc; // Couleur de fond du header (bleu très clair)
   width: 100%; // Le header prend toute la largeur de l'écran
   padding: 0 0; // Un peu d'espace en haut et en bas
 
   // Conteneur principal pour centrer le contenu et gérer la largeur
   .container {
-    margin: 0; // Centrage horizontal
+    margin: 0 auto; // Centrage horizontal
     padding: 0; // Un peu d'air sur les côtés
     display: flex;
+    max-width: 100%; // Limite la largeur pour éviter que le contenu touche les bords
     flex-direction: column; // Les éléments (top + nav) sont empilés
     gap: 1rem; // Espace entre le top et la barre de navigation
     width: 100%;
@@ -21,6 +29,7 @@
     justify-content: space-between; // Logo à gauche, recherche + bouton à droite
     gap: 1rem; // Espace entre les éléments
     flex-wrap: wrap; // Permet de passer à la ligne sur petits écrans si nécessaire
+    width: 100%;
 
     // Logo
     .logo img {
@@ -54,15 +63,15 @@
 
         input {
           padding: 0.4rem 0.6rem;
-          border: 1px solid #ccc; // Bord gris clair
+          border: 1px solid $color_gris; // Bord gris clair
           border-radius: 4px;
           font-size: 1rem;
         }
 
         button {
           padding: 0.4rem 0.6rem;
-          background-color: #0074c7; // Bleu moyen
-          color: white;
+          background-color: $color_bleuCLair; // Bleu moyen
+          color: $color_blanc;
           border: none;
           border-radius: 4px;
           cursor: pointer;
@@ -72,8 +81,8 @@
       // Bouton de connexion
       .connexion-button {
         padding: 0.4rem 0.6rem;
-        background-color: #00497c; // Bleu foncé
-        color: white;
+        background-color: $color_bleuFonce; // Bleu foncé
+        color: $color_blanc;
         border: none;
         border-radius: 4px;
         cursor: pointer;
@@ -112,22 +121,22 @@
         height: 100%;
         width: 100%;
         text-decoration: none; // Supprime le soulignement
-        color: #00497c; // Couleur du texte
-        background-color: white; // Fond blanc par défaut
+        color: $color_bleuFonce; // Couleur du texte
+        background-color: $color_blanc; // Fond blanc par défaut
         box-sizing: border-box; // Inclut les bordures dans la taille
 
         // Bordures visibles autour de chaque lien
-        border-left: 1px solid black;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
+        border-left: 1px solid $color_gris;
+        border-top: 1px solid $color_gris;
+        border-bottom: 1px solid $color_gris;
 
         &.active {
           font-weight: bold; // Met en gras si le lien est actif
-          color: #0074c7; // Couleur plus vive
+          color: $color_bleuCLair; // Couleur plus vive
         }
 
         &:hover {
-          background-color: #e0f0ff; // Fond plus clair au survol
+          background-color: $color_blanc; // Fond plus clair au survol
         }
       }
 
@@ -141,7 +150,7 @@
 }
 
 // Responsive - Burger menu header
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 585px) {
   // .header-top {
   //   flex-direction: row; // Empile les éléments
   // }
@@ -156,8 +165,8 @@
     display: none; // Cacher le menu classique
     flex-direction: column;
     width: 100%;
-    background-color: #fff;
-    border-top: 1px solid #ccc;
+    background-color: $color_blanc;
+    border-top: 1px solid $color_gris;
     position: relative;
   z-index: 1000; // 🔧 assure que le menu passe au-dessus du contenu
   }
