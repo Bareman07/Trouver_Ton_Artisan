@@ -70,3 +70,21 @@ $color_vert: #82b864;
     }
   }
 }
+
+@media (max-width: 991px) {
+  .top-artisans {
+    .artisan-card {
+      .btn-group {
+        display: flex;
+        flex-direction: column; /* empile les boutons */
+        align-items: stretch;   /* chaque bouton prend toute la largeur */
+      }
+
+      .btn-group .btn {
+        margin: 0 0 0.5rem 0;   /* espace vertical entre les boutons */
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

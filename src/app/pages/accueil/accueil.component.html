@@ -93,8 +93,8 @@
               <p>Spécialité : {{ topArtisans[2]?.specialite }}</p>
               <p>Ville : {{ topArtisans[2]?.ville }}</p>
               <p>{{ topArtisans[2]?.description }}</p>
-              <div class="btn-group mt-2">
-                <a [routerLink]="['/artisan', topArtisans[2]?.id]" class="btn">Lien</a>
+              <div class="btn-group mt-2 d-flex flex-column flex-md-row">
+                <a [routerLink]="['/artisan', topArtisans[0]?.id]" class="btn mb-2 mb-md-0">Lien</a>
                 <button class="btn">Map</button>
               </div>
               <div class="stars mt-2">⭐ {{ topArtisans[2]?.note }}</div>
