@@ -19,7 +19,7 @@
           "options": {
             "outputPath": "dist/trouve-ton-artisan",
             "index": "src/index.html",
-            "baseHref": "/trouve-ton-artisan/",
+            "baseHref": "/Trouver_Ton_Artisan/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
