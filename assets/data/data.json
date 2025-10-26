@@ -1,0 +1,125 @@
+[
+  {
+    "group": "top_artisans",
+    "type": "artisan",
+    "id": 1,
+    "nom": "Jean Dupont",
+    "specialite": "Menuisier",
+    "description": "Expert en menuiserie bois traditionnelle.",
+    "note": 4.8,
+    "categorie": "batiment",
+    "ville": "Clermont-Ferrand",
+    "images": {
+      "photo": "assets/img/artisans/jean-dupont/photo.png",
+      "logo": "assets/img/artisans/jean-dupont/logo.png"
+    }
+  },
+  {
+    "group": "top_artisans",
+    "type": "artisan",
+    "id": 2,
+    "nom": "Marie Lemoine",
+    "specialite": "Céramiste",
+    "description": "Créations uniques en terre cuite et porcelaine.",
+    "note": 5,
+    "categorie": "fabrication",
+    "ville": "Reims",
+    "images": {
+      "photo": "assets/img/artisans/marie-lemoine/photo.png",
+      "logo": "assets/img/artisans/marie-lemoine/logo.png"
+    }
+  },
+  {
+    "group": "top_artisans",
+    "type": "artisan",
+    "id": 3,
+    "nom": "Paul Bernard",
+    "specialite": "Boulanger",
+    "description": "Pain bio et viennoiseries faites maison.",
+    "note": 4.7,
+    "categorie": "alimentation",
+    "ville": "Saint-Étienne",
+    "images": {
+      "photo": "assets/img/artisans/paul-bernard/photo.png",
+      "logo": "assets/img/artisans/paul-bernard/logo.png"
+    }
+  },
+  {
+    "group": "catalogue",
+    "type": "artisan",
+    "id": 4,
+    "nom": "Lucie Martin",
+    "specialite": "Plombier",
+    "description": "Interventions rapides et soignées.",
+    "note": 4.2,
+    "categorie": "services",
+    "ville": "Lille",
+    "images": {
+      "photo": "assets/img/artisans/lucie-martin/photo.png",
+      "logo": "assets/img/artisans/lucie-martin/logo.png"
+    }
+  },
+  {
+  "group": "catalogue",
+  "type": "artisan",
+  "id": 5,
+  "nom": "Sophie Leroy",
+  "specialite": "Boucher",
+  "description": "Propose des viandes locales et des préparations faites maison issues de l’élevage régional.",
+  "note": 4.6,
+  "categorie": "alimentation",
+  "ville": "Lyon",
+  "images": {
+    "photo": "assets/img/artisans/sophie-leroy/photo.png",
+    "logo": "assets/img/artisans/sophie-leroy/logo.png"
+    }
+  },
+  {
+  "group": "catalogue",
+  "type": "artisan",
+  "id": 6,
+  "nom": "Thomas Girard",
+  "specialite": "Charpentier",
+  "description": "Spécialiste des structures bois et des rénovations de toitures traditionnelles.",
+  "note": 4.4,
+  "categorie": "batiment",
+  "ville": "Hazebrouck",
+  "images": {
+    "photo": "assets/img/artisans/thomas-girard/photo.png",
+    "logo": "assets/img/artisans/thomas-girard/logo.png"
+   }
+  },
+
+  {
+    "group": "images",
+    "type": "image",
+    "id": 501,
+    "src": "assets/img/images/ateliers/atelier-bois.png",
+    "alt": "Atelier de menuiserie",
+    "categorie": "batiment"
+  },
+  {
+    "group": "images",
+    "type": "image",
+    "id": 502,
+    "src": "assets/img/images/ateliers/atelier-ceramique.png",
+    "alt": "Atelier de céramique",
+    "categorie": "fabrication"
+  },
+  {
+    "group": "images",
+    "type": "image",
+    "id": 503,
+    "src": "assets/img/images/ateliers/atelier-boulangerie.png",
+    "alt": "Four de boulangerie artisanale",
+    "categorie": "alimentation"
+  },
+  {
+    "group": "images",
+    "type": "image",
+    "id": 504,
+    "src": "assets/img/images/ateliers/atelier-plomberie.png",
+    "alt": "Travail de plomberie",
+    "categorie": "services"
+  }
+]
