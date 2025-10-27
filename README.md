@@ -1,59 +1,60 @@
 # TrouveTonArtisan
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+**TrouveTonArtisan** est une application web développée avec **Angular**.  
+Elle met en avant des artisans, leurs spécialités et leurs coordonnées, afin de faciliter la recherche et la mise en relation.  
 
-## Development server
+[Voir la démo en ligne](https://bareman07.github.io/Trouver_Ton_Artisan/)
 
-To start a local development server, run:
+---
 
+## Fonctionnalités
+- Classement du **Top 3 artisans**
+- Recherche d'artisans par spécialité et localisation
+- Fiche descriptive de l'artisan
+- Interface **responsive** (mobile, tablette, desktop)
+- Navigation fluide via **Angular Router**
+- Déploiement sécurisé sur **GitHub Pages**
+
+---
+
+## Installation & Lancement
 ```bash
+git clone https://github.com/Bareman07/Trouver_Ton_Artisan.git
+cd Trouver_Ton_Artisan
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+Accessible sur http://localhost:4200
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
+Build & Déploiement
+ng build --configuration production --base-href=/Trouver_Ton_Artisan/
+ng deploy --base-href=/Trouver_Ton_Artisan/
 ```
+## Sécurité mise en place
 
-## Building
 
-To build the project run:
+|Sécurité                              |	                                     |
+|--------------------------------------|---------------------------------------|
+|HTTPS (GitHub Pages)                  |	Protection des échanges              |
+|Encodage Angular                      | Protection contre XSS                 |
+|Séparation du code source et du build | Pas d’exposition du code sensible     |
+|Hashing des fichiers                  |	Évite le cache obsolète              |
+|404.html	                             | Redirection propre des routes Angular |
+|Dépendances à jour	                   | Correction des failles connues        |
 
-```bash
-ng build
-```
+## Stack technique
+- Angular
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Bootstrap
 
-## Running unit tests
+- SCSS
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- GitHub Pages
 
-```bash
-ng test
-```
+- EmaiJS
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Ressources utiles
+- [Docucmentation Angular](https://angular.dev/))
+- [Angular CLI](https://angular.dev/tools/cli)
+- [Déploiement GitHub Pages](https://angular.dev/tools/deployment/github-pages)
