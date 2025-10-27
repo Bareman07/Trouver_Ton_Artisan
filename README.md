@@ -52,9 +52,9 @@ ng deploy --base-href=/Trouver_Ton_Artisan/
 
 - GitHub Pages
 
-- EmaiJS
+- EmailJs
 
 ## Ressources utiles
-- [Docucmentation Angular](https://angular.dev/))
+- [Docucmentation Angular](https://angular.dev/)
 - [Angular CLI](https://angular.dev/tools/cli)
 - [Déploiement GitHub Pages](https://angular.dev/tools/deployment/github-pages)
